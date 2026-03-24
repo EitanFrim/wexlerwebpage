@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, MapPin } from "lucide-react";
+import { BASE_PATH } from "@/lib/constants";
 
 const navLinks = [
   { href: "/", label: "דף הבית" },
@@ -18,7 +19,7 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               <Image
-                src="/images/logo.png"
+                src={`${BASE_PATH}/images/logo.png`}
                 alt="ד״ר דניאל וקסלר"
                 width={160}
                 height={70}

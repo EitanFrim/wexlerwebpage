@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { BASE_PATH } from "@/lib/constants";
 import {
   Award,
   GraduationCap,
@@ -87,7 +88,7 @@ export default function AboutContent() {
             >
               <div className="relative rounded-3xl overflow-hidden aspect-[3/4]">
                 <Image
-                  src="/images/dr-wexler.jpg"
+                  src={`${BASE_PATH}/images/dr-wexler.jpg`}
                   alt="ד״ר דניאל וקסלר במרפאת השיניים"
                   fill
                   className="object-cover object-top"

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Award, Clock, Users, ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { BASE_PATH } from "@/lib/constants";
 
 const highlights = [
   { icon: Award, label: "מומחיות", value: "ניסיון רב" },
@@ -26,7 +27,7 @@ export default function About() {
           >
             <div className="relative rounded-3xl overflow-hidden aspect-[4/5]">
               <Image
-                src="/images/dr-wexler.jpg"
+                src={`${BASE_PATH}/images/dr-wexler.jpg`}
                 alt="ד״ר דניאל וקסלר במרפאת השיניים"
                 fill
                 className="object-cover object-top"

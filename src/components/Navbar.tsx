@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, Menu, X } from "lucide-react";
+import { BASE_PATH } from "@/lib/constants";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -36,7 +37,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <Image
-              src="/images/logo.png"
+              src={`${BASE_PATH}/images/logo.png`}
               alt="ד״ר דניאל וקסלר - מרפאת שיניים"
               width={140}
               height={60}
