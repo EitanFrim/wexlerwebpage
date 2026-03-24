@@ -93,18 +93,33 @@ function JsonLd() {
     availableService: [
       {
         "@type": "MedicalProcedure",
-        name: "כירורגיה פומית",
+        name: "כירורגיה",
         alternateName: "Oral Surgery",
-      },
-      {
-        "@type": "MedicalProcedure",
-        name: "שיקום הפה",
-        alternateName: "Oral Rehabilitation",
       },
       {
         "@type": "MedicalProcedure",
         name: "טיפולי חניכיים",
         alternateName: "Gum Treatments",
+      },
+      {
+        "@type": "MedicalProcedure",
+        name: "שיקום אסתטי של הפה",
+        alternateName: "Aesthetic Oral Rehabilitation",
+      },
+      {
+        "@type": "MedicalProcedure",
+        name: "טיפולים בהרדמה מלאה",
+        alternateName: "Treatments Under Full Anesthesia",
+      },
+      {
+        "@type": "MedicalProcedure",
+        name: "טיפולים בגז צחוק",
+        alternateName: "Nitrous Oxide Sedation",
+      },
+      {
+        "@type": "MedicalProcedure",
+        name: "לייזר לשיכוך כאבים",
+        alternateName: "Laser Pain Relief",
       },
     ],
     priceRange: "$$",

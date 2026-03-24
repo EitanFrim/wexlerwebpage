@@ -1,27 +1,26 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Syringe, Smile, HeartPulse, ArrowLeft } from "lucide-react";
+import {
+  Syringe,
+  Smile,
+  HeartPulse,
+  BedDouble,
+  Wind,
+  Zap,
+  ArrowLeft,
+} from "lucide-react";
 import Link from "next/link";
 
 const services = [
   {
     icon: Syringe,
-    title: "כירורגיה פומית",
+    title: "כירורגיה",
     description:
       "ניתוחים מתקדמים בחלל הפה כולל עקירות שיני בינה, השתלות ועוד, תוך שימוש בטכנולוגיה חדשנית ובגישה מקצועית.",
     color: "from-primary/10 to-primary/5",
     iconBg: "bg-primary/10",
     iconColor: "text-primary",
-  },
-  {
-    icon: Smile,
-    title: "שיקום הפה",
-    description:
-      "שיקום מלא של הפה הכולל כתרים, גשרים, ציפויים ושתלים לשחזור מלא של התפקוד והאסתטיקה של החיוך שלכם.",
-    color: "from-accent/10 to-accent/5",
-    iconBg: "bg-accent/10",
-    iconColor: "text-accent",
   },
   {
     icon: HeartPulse,
@@ -32,18 +31,58 @@ const services = [
     iconBg: "bg-secondary/10",
     iconColor: "text-secondary",
   },
+  {
+    icon: Smile,
+    title: "שיקום אסתטי של הפה",
+    description:
+      "שיקום מלא של הפה הכולל כתרים, גשרים, ציפויים ושתלים לשחזור מלא של התפקוד והאסתטיקה של החיוך שלכם.",
+    color: "from-accent/10 to-accent/5",
+    iconBg: "bg-accent/10",
+    iconColor: "text-accent",
+  },
+  {
+    icon: BedDouble,
+    title: "טיפולים בהרדמה מלאה",
+    description:
+      "טיפולי שיניים מורכבים תחת הרדמה מלאה לחוויית טיפול נטולת חרדה ומתח, מתאים במיוחד למטופלים עם חרדת שיניים.",
+    color: "from-primary/10 to-primary/5",
+    iconBg: "bg-primary/10",
+    iconColor: "text-primary",
+  },
+  {
+    icon: Wind,
+    title: "טיפולים בגז צחוק",
+    description:
+      "סדציה בגז צחוק להרגעה ושחרור מתח במהלך הטיפול, מאפשרת חוויה נעימה ורגועה ללא צורך בהרדמה מלאה.",
+    color: "from-secondary/10 to-secondary/5",
+    iconBg: "bg-secondary/10",
+    iconColor: "text-secondary",
+  },
+  {
+    icon: Zap,
+    title: "לייזר לשיכוך כאבים",
+    description:
+      "שימוש בטכנולוגיית לייזר מתקדמת להפחתת כאבים, האצת ריפוי רקמות וטיפול יעיל ונטול מגע בבעיות שונות בחלל הפה.",
+    color: "from-accent/10 to-accent/5",
+    iconBg: "bg-accent/10",
+    iconColor: "text-accent",
+  },
 ];
 
 const containerVariants = {
   hidden: {},
   visible: {
-    transition: { staggerChildren: 0.15 },
+    transition: { staggerChildren: 0.1 },
   },
 };
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" as const },
+  },
 };
 
 export default function Services() {
@@ -64,17 +103,18 @@ export default function Services() {
             מגוון טיפולים מתקדמים
           </h2>
           <p className="text-text-muted text-lg max-w-xl mx-auto">
-            טיפולי שיניים מקצועיים ברמה הגבוהה ביותר עם ציוד מתקדם ותוצאות מוכחות
+            טיפולי שיניים מקצועיים ברמה הגבוהה ביותר עם ציוד מתקדם ותוצאות
+            מוכחות
           </p>
         </motion.div>
 
-        {/* Cards */}
+        {/* Cards - 3x2 grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid md:grid-cols-3 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {services.map((service) => (
             <motion.div
